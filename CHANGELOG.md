@@ -1,3 +1,15 @@
+## v1.0.2 - v1.0.3
+10 may 2017
+
+* mongo updated
+* access
+* libraryjs updated
+
+## v1.0.1
+8 may 2017
+
+* mongo
+
 ## v 1.0.0
 8 may 2017
 
@@ -6,7 +18,7 @@
 * comma error fixed
 * release
 
-## v 0.0.1
+## v0.0.1
 5 may 2017
 
 * First commit

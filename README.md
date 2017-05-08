@@ -1,5 +1,5 @@
 # angular-default
-### v 1.0.0 ( 8 may 2017 )
+### v1.0.3 ( last update: 10 may 2017 )
 
 Pattern for new angular projects.
 Based on M.E.A.N.
