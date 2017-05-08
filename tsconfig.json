@@ -4,14 +4,13 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "lib": [ "es2015", "dom" ],
-    "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
 
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["public/system/global/script/*"]
+      "@/*": ["front-end/app/global/script/*"]
     } 
   },
   "exclude": [

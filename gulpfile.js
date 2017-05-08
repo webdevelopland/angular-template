@@ -64,7 +64,7 @@ gulp.task("less", () => {
 
 // —————————————————————— Start express ——————————————————————
 gulp.task("express", () => {
-  require( "./express" )();
+  require( "./express" );
 });
 
 // —————————————————————— Watching files updates ——————————————————————

@@ -1,6 +1,6 @@
 {
   "name": "angular-default",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Pattern for new angular projects",
   "scripts": {
     "start": "node express.js"
