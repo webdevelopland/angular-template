@@ -5,23 +5,23 @@ var gulpsync = require("gulp-sync")(gulp);
 var clean = require("gulp-clean");
 var concat = require("gulp-concat");
 var typescript = require("gulp-typescript");
-var less = require("gulp-less");
+var sass = require("gulp-sass");
 var autoprefixer = require("gulp-autoprefixer");
 var tsconfig = require("./tsconfig.json");
 var browserSync = require("browser-sync");
 var js = require("libraryjs");
 var defaults = require( "./back-end/include/defaults" )();
 
-gulp.task("default", ["reboot"]);
+gulp.task("default", ["compile"]);
 
 // —————————————————————— Paths ——————————————————————
 const appPath = path.join( process.cwd(), "/front-end/app" );
 const distPath = path.join( appPath, "/dist" );
-const distLess = path.join( distPath, "css" );
+const distCss = path.join( distPath, "css" );
 
 // —————————————————————— Groups ——————————————————————
 //compile
-gulp.task("compile", gulpsync.sync([ "clean", "typescript", "less" ]));
+gulp.task("compile", gulpsync.sync([ "clean", "typescript", "sass" ]));
 
 //static: just compile and launch
 gulp.task("static", gulpsync.sync([ "compile", "express" ]));
@@ -45,12 +45,12 @@ var compileTypescript = (src) => {
     }))
   ;
 };
-var compileLess = (src) => {
+var compileSass = (src) => {
   return gulp.src( src )
-    .pipe(concat("app.less"))
-    .pipe(less())
+    .pipe(concat("app.scss"))
+    .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(gulp.dest( distLess ))
+    .pipe(gulp.dest( distCss ))
   ;
 };
 
@@ -58,8 +58,11 @@ gulp.task("typescript", () => {
   return compileTypescript( path.join( appPath, "/**/*.ts" ) );
 });
 
-gulp.task("less", () => {
-  return compileLess( path.join( appPath, "/**/*.less") );
+gulp.task("sass", () => {
+  return compileSass([
+    path.join( appPath, "/**/global/sass/default/*.scss" ), // Global variables
+    path.join( appPath, "/**/*.scss" ) // Styles
+  ]);
 });
 
 // —————————————————————— Start express ——————————————————————
@@ -69,16 +72,8 @@ gulp.task("express", () => {
 
 // —————————————————————— Watching files updates ——————————————————————
 gulp.task("watch", () => {
-  gulp.watch(path.join( appPath, "/**/*.ts")).on('change', (event) => {
-    if (event.type === "changed") {
-      gulp.start("typescript");
-    }
-    else {
-      compileTypescript(event.path, tsDist)
-    }
-  });
-
-  gulp.watch(path.join( appPath, "/**/*.less"), ["less"]);
+  gulp.watch(path.join( appPath, "/**/*.ts"), ["typescript"]);
+  gulp.watch(path.join( appPath, "/**/*.scss"), ["sass"]);
 });
 
 // —————————————————————— Auto browser refresh ——————————————————————

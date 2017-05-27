@@ -1,6 +1,6 @@
 {
   "name": "angular-default",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Pattern for new angular projects",
   "scripts": {
     "start": "node express.js"
@@ -23,6 +23,7 @@
     "body-parser": "1.17.1",
     "core-js": "2.4.1",
     "express": "4.15.2",
+    "gulp-sass": "3.1.0",
     "libraryjs": "1.2.0",
     "mongojs": "2.4.0",
     "rxjs": "5.3.1",
@@ -40,7 +41,6 @@
     "gulp-autoprefixer": "3.1.1",
     "gulp-clean": "0.3.2",
     "gulp-concat": "2.6.1",
-    "gulp-less": "3.3.0",
     "gulp-sync": "0.1.4",
     "gulp-tsconfig": "0.1.0",
     "gulp-typescript": "3.1.6",
