@@ -1,0 +1,6 @@
+$bg-color: white;
+
+$default-font: Arial;
+@mixin default-font {
+  font-family: $default-font;
+}

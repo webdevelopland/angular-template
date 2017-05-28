@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["front-end/app/global/script/*"]
+      "@/*": ["front-end/app/*"]
     } 
   },
   "exclude": [

@@ -6,29 +6,23 @@
   <base href="/">
 
   <link rel="icon" href="/file/favicon.ico">
-  <!--——————————————————————————— twitter bootsrtap —————————————————————————————————-->
-  <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.css">
-  <script src="/bower/jquery/dist/jquery.min.js"></script>
-  <script src="/bower/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!--——————————————————————————— External ———————————————————————————————-->
+  <!-- <script src="..."></script> -->
 
-  <!--——————————————————————————— css —————————————————————————————————-->
+  <!--——————————————————————————— Internal —————————————————————————————————-->
   <link rel="stylesheet" href="/app/dist/css/app.css">
   
-  <!--——————————————————————————— js ———————————————————————————————-->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.core.min.js"></script> -->
-  
-  <!--————————————————————————— Angular —————————————————————————-->
+  <!--——————————————————————————— Angular —————————————————————————————————-->
   <script src="/node_modules/core-js/client/shim.min.js"></script>
   <script src="/node_modules/zone.js/dist/zone.js"></script>
   <script src="/node_modules/systemjs/dist/system.src.js"></script>
   
-  <script src="/app/angular/systemjs.config.js"></script>
+  <script src="/app/bootstrap/systemjs.config.js"></script>
   <script>
     System.import("app").catch(function(err){ console.error(err); });
   </script>
 </head>
 <body>
-<app></app>
+  <angular></angular>
 </body>
 </html>

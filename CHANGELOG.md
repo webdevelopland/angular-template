@@ -1,3 +1,18 @@
+## v1.0.10
+10 june 2017
+
+* update structure
+
+## v1.0.8
+29 may 2017
+
+* fix of code structure
+
+## v1.0.7
+28 may 2017
+
+* angular material
+
 ## v1.0.6
 28 may 2017
 

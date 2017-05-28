@@ -11,7 +11,7 @@ var tsconfig = require("./tsconfig.json");
 var browserSync = require("browser-sync");
 var js = require("libraryjs");
 var fcrypt = require("fcrypt");
-var defaults = require( "./back-end/include/defaults" )();
+var defaults = require( "./back-end/core/defaults" )();
 
 gulp.task("default", ["compile"]);
 
@@ -61,7 +61,8 @@ gulp.task("typescript", () => {
 
 gulp.task("sass", () => {
   return compileSass([
-    path.join( appPath, "/**/global/sass/default/*.scss" ), // Global variables
+    path.join( process.cwd(), "/node_modules/@angular/material/_theming.scss" ), //Angular Material Themes Builder
+    path.join( appPath, "/**/sass/default/*.scss" ), // Global variables
     path.join( appPath, "/**/*.scss" ) // Styles
   ]);
 });

@@ -3,8 +3,8 @@ var fs = require("fs");
 var bodyParser = require("body-parser");
 var mongojs = require("mongojs");
 var js = require("libraryjs");
-var Ajax = require( process.cwd() + "/back-end/require/ajax");
-var defaults = require( process.cwd() + "/back-end/include/defaults" )();
+var defaults = require("./defaults")();
+var Ajax = require( process.cwd() + "/back-end/shell/ajax/ajax");
 
 module.exports = (app) => {
 
@@ -53,10 +53,10 @@ function mongodb(ajax) {
 }
 
 function ajaxRouter(ajax) {
-  var routesPath = path.join( process.cwd(), "/back-end/include/ajax-routes", ajax.import.ajax + ".js" );
+  var routesPath = path.join( process.cwd(), "/back-end/core/routes", ajax.import.ajax + ".js" );
 
-  fs.exists(routesPath, (exist) => {
-    if (exist) {
+  fs.exists(routesPath, (exists) => {
+    if (exists) {
       require( routesPath )(ajax);
     }
     else {

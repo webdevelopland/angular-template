@@ -1,19 +1,23 @@
 import { Component, OnInit, AfterContentInit } from "@angular/core";
 
 @Component({
-  selector: "app",
-  templateUrl: "/app/angular/app.html"
+  selector: "angular",
+  templateUrl: "/app/components/angular/angular.html"
 })
-export class AppComponent implements OnInit, AfterContentInit {
+export class AngularComponent implements OnInit, AfterContentInit {
+
   constructor() {}
+
   ngOnInit() {
     var f = this;
 
     //
   }
+
   ngAfterContentInit() {
     var f = this;
     
     //
   }
+  
 }
