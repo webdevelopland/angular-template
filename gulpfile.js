@@ -10,6 +10,7 @@ var autoprefixer = require("gulp-autoprefixer");
 var tsconfig = require("./tsconfig.json");
 var browserSync = require("browser-sync");
 var js = require("libraryjs");
+var fcrypt = require("fcrypt");
 var defaults = require( "./back-end/include/defaults" )();
 
 gulp.task("default", ["compile"]);
@@ -86,3 +87,56 @@ gulp.task("browserSync", () => {
     port: defaults.browserSyncPort,
   });
 });
+
+// —————————————————————— Encryption ——————————————————————
+gulp.task("encrypt", () => {
+  var loading = new js.Async();
+  process.stdout.write("password: ");
+  read( (password) => {
+    fcrypt.encrypt({
+      key: password,
+      input: "./back-end/private",
+      output: "./back-end/private.data",
+      callback: (errors) => {
+        if (errors.exists) errors.console();
+        else console.log("encrypted");
+        loading.set("true");
+      }
+    });
+  });
+  return loading;
+});
+
+gulp.task("decrypt", () => {
+  var loading = new js.Async();
+  process.stdout.write("password: ");
+  read( (password) => {
+    fcrypt.decrypt({
+      key: password,
+      input: "./back-end/private.data",
+      output: "./back-end/private",
+      callback: (errors) => {
+        if (errors.exists) errors.console();
+        else console.log("decrypted");
+        loading.set("true");
+      }
+    });
+  });
+  return loading;
+});
+
+function read(callback) {
+  process.stdin.setEncoding("utf8");
+
+  process.stdin.on("readable", () => {
+    var chunk = process.stdin.read();
+    if (chunk !== null) {
+      callback(chunk);
+      process.stdin.end();
+    }
+  });
+
+  process.stdin.on("end", () => {
+    callback(null);
+  });
+}

@@ -1,6 +1,6 @@
 {
   "name": "angular-default",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Pattern for new angular projects",
   "scripts": {
     "start": "node express.js"
@@ -37,6 +37,7 @@
     "@types/node": "7.0.16",
     "@types/selenium-webdriver": "3.0.3",
     "browser-sync": "2.18.8",
+    "fcrypt": "1.1.1",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "3.1.1",
     "gulp-clean": "0.3.2",
