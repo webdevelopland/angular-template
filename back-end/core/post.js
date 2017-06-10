@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var mongojs = require("mongojs");
 var js = require("libraryjs");
 var defaults = require("./defaults")();
-var Ajax = require( process.cwd() + "/back-end/shell/ajax/ajax");
+var ajaxmanager = require("ajaxmanager");
 
 module.exports = (app) => {
 
@@ -21,7 +21,7 @@ module.exports = (app) => {
     }
     
     //create ajax handler
-    var ajax = Ajax.create();
+    var ajax = ajaxmanager.create();
     ajax.set({
       req: req,
       res: res

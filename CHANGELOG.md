@@ -1,3 +1,9 @@
+## v1.0.11
+10 june 2017
+
+* ajaxmanager
+* mongoshell
+
 ## v1.0.10
 10 june 2017
 

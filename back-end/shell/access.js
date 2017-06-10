@@ -1,9 +1,9 @@
-var mongocore = require("./mongo-core");
+var mongoshell = require("mongoshell");
 var js = require("libraryjs");
 
 var checkAdmin = (param) => {
 
-  mongocore.doc.find({
+  mongoshell.doc.find({
     ajax: param.ajax,
     query: {
       cookie: param.cookie
