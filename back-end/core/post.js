@@ -27,7 +27,9 @@ module.exports = (app) => {
       res: res
     });
 
-    mongodb(ajax);
+    //Use mongodb?
+    if (ajax.import.mongo) mongodb(ajax);
+    else ajaxRouter(ajax);
   });
 
   app.post("*", (req, res, next) => {

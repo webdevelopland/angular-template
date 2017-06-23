@@ -22,7 +22,7 @@ const distCss = path.join( distPath, "css" );
 
 // —————————————————————— Groups ——————————————————————
 //compile
-gulp.task("compile", gulpsync.sync([ "clean", "typescript", "sass" ]));
+gulp.task("compile", gulpsync.sync([ "clean", ["ts", "sass"] ]));
 
 //static: just compile and launch
 gulp.task("static", gulpsync.sync([ "compile", "express" ]));
@@ -55,7 +55,7 @@ var compileSass = (src) => {
   ;
 };
 
-gulp.task("typescript", () => {
+gulp.task("ts", () => {
   return compileTypescript( path.join( appPath, "/**/*.ts" ) );
 });
 
@@ -74,7 +74,6 @@ gulp.task("express", () => {
 
 // —————————————————————— Watching files updates ——————————————————————
 gulp.task("watch", () => {
-  gulp.watch(path.join( appPath, "/**/*.ts"), ["typescript"]);
   gulp.watch(path.join( appPath, "/**/*.scss"), ["sass"]);
 });
 
@@ -82,7 +81,7 @@ gulp.task("watch", () => {
 gulp.task("browserSync", () => {
   browserSync.init(null, {
     proxy: "http://localhost:" + defaults.expressPort,
-    files: ["front-end/app/**/*.js", "front-end/app/**/*.html", "front-end/app/**/*.css"],
+    files: ["front-end/app/**/*.html", "front-end/app/**/*.css"],
     browser: "google chrome",
     open: false,
     port: defaults.browserSyncPort,

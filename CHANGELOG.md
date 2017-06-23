@@ -1,3 +1,13 @@
+## v1.0.12
+23 june 2017
+
+* gulp typescript -> ts
+* gulp auto doen't compile ts anymore
+* bootstrap.component
+* nav.component
+* /service -> /services
+* mongo: true/false
+
 ## v1.0.11
 10 june 2017
 

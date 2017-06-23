@@ -10,19 +10,23 @@ import { MaterialModule, MdNativeDateModule } from "@angular/material";
 import "hammerjs";
 
 // —————————————————————— Components ——————————————————————
+import { BootstrapComponent } from "@/bootstrap/bootstrap.component";
 import { AngularComponent } from "@/components/angular/angular.component";
+import { NavComponent } from "@/components/nav/nav.component";
 
 // —————————————————————— Routes ——————————————————————
 import { HomePageComponent } from "@/routes/home/home.component";
+import { SecondPageComponent } from "@/routes/second/second.component";
 import { Error404PageComponent } from "@/routes/error404/error404.component";
 
 const appRoutes: Routes = [
-  { path: "", component: HomePageComponent },
-  { path: "**", component: Error404PageComponent }
+  { path: "",         component: HomePageComponent },
+  { path: "second",   component: SecondPageComponent },
+  { path: "**",       component: Error404PageComponent }
 ];
 
 // —————————————————————— Servies ——————————————————————
-import { SampleService } from "@/service/sample.service";
+import { SampleService } from "@/services/sample.service";
 
 // ———————————————————————————————— NgModule ————————————————————————————————
 @NgModule({
@@ -44,13 +48,17 @@ import { SampleService } from "@/service/sample.service";
   declarations: [
     // Components
     AngularComponent,
+    BootstrapComponent,
+    NavComponent,
 
     // Routes:
     HomePageComponent,
+    SecondPageComponent,
     Error404PageComponent
   ],
   providers: [ 
-    Title
+    Title,
+    SampleService
   ],
   bootstrap: [ AngularComponent ]
 })
