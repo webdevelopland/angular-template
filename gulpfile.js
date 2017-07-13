@@ -27,8 +27,8 @@ gulp.task("compile", gulpsync.sync([ "clean", ["ts", "sass"] ]));
 //static: just compile and launch
 gulp.task("static", gulpsync.sync([ "compile", "express" ]));
 
-//auto: auto compiling and browser refreshing
-gulp.task("auto", gulpsync.sync([ "static", "watch", "browserSync" ]));
+//auto: auto compiling css and browser refreshing
+gulp.task("auto", gulpsync.sync([ "sass", "express", "watch", "browserSync" ]));
 
 //—————————————————————— Delete compiled files ——————————————————————
 gulp.task("clean", () => {

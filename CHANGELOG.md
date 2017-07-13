@@ -1,8 +1,13 @@
+## v1.0.13
+14 jul 2017
+
+* gulpfile: auto doesn't compile ts anymore
+* few changes with sass 
+
 ## v1.0.12
 23 june 2017
 
 * gulp typescript -> ts
-* gulp auto doen't compile ts anymore
 * bootstrap.component
 * nav.component
 * /service -> /services

@@ -1,7 +1,7 @@
 body, html {
-  background: $bg-color;
+  background: $color-bg;
 }
 body {
-  padding: 15px;
+  padding: $padding;
   overflow-x: hidden;
 }
