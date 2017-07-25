@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 
 @Component({
-  templateUrl: "/app/routes/error404/error404.html"
+  templateUrl: "./error404.html",
+  styleUrls: [ "./error404.scss" ]
 })
 export class Error404PageComponent {
 

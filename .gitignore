@@ -1,4 +1,4 @@
 node_modules
 bower_components
-front-end/app/dist
+front-end/dist
 back-end/private

@@ -1,16 +1,10 @@
-import { NgModule } from "@angular/core";
 import { BrowserModule, Title } from "@angular/platform-browser";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 import { HttpModule, JsonpModule } from "@angular/http";
-
-// —————————————————————— Material ——————————————————————
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MaterialModule, MdNativeDateModule } from "@angular/material";
-import "hammerjs";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 // —————————————————————— Components ——————————————————————
-import { BootstrapComponent } from "@/bootstrap/bootstrap.component";
 import { AngularComponent } from "@/components/angular/angular.component";
 import { NavComponent } from "@/components/nav/nav.component";
 
@@ -30,25 +24,9 @@ import { SampleService } from "@/services/sample.service";
 
 // ———————————————————————————————— NgModule ————————————————————————————————
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    JsonpModule,
-    ReactiveFormsModule,
-
-    // Angular Material:
-    BrowserAnimationsModule,
-    MaterialModule,
-    MdNativeDateModule,
-
-    // Router:
-    RouterModule.forRoot(appRoutes, { useHash: false })
-  ],
   declarations: [
     // Components
     AngularComponent,
-    BootstrapComponent,
     NavComponent,
 
     // Routes:
@@ -56,7 +34,15 @@ import { SampleService } from "@/services/sample.service";
     SecondPageComponent,
     Error404PageComponent
   ],
-  providers: [ 
+  imports: [
+    BrowserModule,
+    HttpModule, JsonpModule,
+    FormsModule, ReactiveFormsModule,
+
+    // Router:
+    RouterModule.forRoot(appRoutes, { useHash: false })
+  ],
+  providers: [
     Title,
     SampleService
   ],

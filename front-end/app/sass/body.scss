@@ -1,7 +1,9 @@
+@import "var.scss";
+
 body, html {
   background: $color-bg;
 }
 body {
-  padding: $padding;
+  padding: 15px;
   overflow-x: hidden;
 }

@@ -1,4 +1,4 @@
-var mongoshell = require("mongoshell");
+const mongoshell = require("mongoshell");
 
 module.exports = (ajax) => {
 

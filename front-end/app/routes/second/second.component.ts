@@ -1,22 +1,17 @@
-import { Component, AfterContentInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 
 @Component({
-  templateUrl: "/app/routes/second/second.html"
+  templateUrl: "./second.html",
+  styleUrls: [ "./second.scss" ]
 })
-export class SecondPageComponent implements AfterContentInit {
+export class SecondPageComponent {
 
   constructor(
     public title:Title
   ) {
     var f = this;
     f.title.setTitle("Second Page");
-    
-  }
-
-  ngAfterContentInit() {
-    var f = this;
-
   }
 
 }

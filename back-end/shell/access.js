@@ -1,5 +1,5 @@
-var mongoshell = require("mongoshell");
-var js = require("libraryjs");
+const mongoshell = require("mongoshell");
+const js = require("libraryjs");
 
 var checkAdmin = (param) => {
 
