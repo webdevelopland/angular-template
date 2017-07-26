@@ -2,8 +2,7 @@ import { Component } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 
 @Component({
-  templateUrl: "./second.html",
-  styleUrls: [ "./second.scss" ]
+  templateUrl: "./second.html"
 })
 export class SecondPageComponent {
 

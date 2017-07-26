@@ -2,8 +2,7 @@ import { Component } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 
 @Component({
-  templateUrl: "./home.html",
-  styleUrls: [ "./home.scss" ]
+  templateUrl: "./home.html"
 })
 export class HomePageComponent {
 

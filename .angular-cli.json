@@ -22,7 +22,7 @@
         "prod": "app/bootstrap/environments/environment.prod.ts"
       },
       "styles": [
-        "app/sass/default.scss"
+        "app/styles/css/app.css"
       ],
       "scripts": []
     }
@@ -52,7 +52,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": "css",
     "component": {}
   }
 }

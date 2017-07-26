@@ -1,3 +1,10 @@
+## v2.1.0
+26 jul 2017
+
+* Compiling scss with gulp
+* concurrently
+* font-face
+
 ## v2.0.0
 25 jul 2017
 

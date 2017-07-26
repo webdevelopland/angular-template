@@ -1,6 +1,6 @@
 {
   "name": "angular-default",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Pattern for new angular projects",
   "scripts": {
     "start": "node express.js",
@@ -8,7 +8,10 @@
     "build": "ng build --prod --aot",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "scss": "gulp auto",
+    "dev": "concurrently \"npm run scss\" \"npm run serve\"",
+    "devx": "concurrently \"npm run scss\" \"npm run start\" \"npm run serve\""
   },
   "author": {
     "name": "Web Developland",
@@ -39,9 +42,17 @@
     "@types/jasminewd2": "2.0.2",
     "@types/node": "8.0.16",
     "codelyzer": "3.1.2",
+    "concurrently": "3.5.0",
     "core-js": "2.4.1",
     "fcrypt": "1.1.1",
     "gulp": "3.9.1",
+    "gulp-autoprefixer": "4.0.0",
+    "gulp-clean": "0.3.2",
+    "gulp-concat": "2.6.1",
+    "gulp-sass": "3.1.0",
+    "gulp-sync": "0.1.4",
+    "gulp-typescript": "3.2.1",
+    "gulp-watch": "4.3.11",
     "jasmine-core": "2.6.4",
     "jasmine-spec-reporter": "4.1.1",
     "karma": "1.7.0",
