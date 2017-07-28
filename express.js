@@ -6,7 +6,7 @@ var app = express();
 const defaults = require( "./back-end/core/defaults" )();
 
 // —————————————————————— Static Files ——————————————————————
-require( "./back-end/core/static-files" )(express, app);
+require( "./back-end/core/static-files" )(app);
 
 // —————————————————————— POST ——————————————————————
 require( "./back-end/core/post" )(app);
@@ -18,3 +18,13 @@ require( "./back-end/core/get" )(app);
 var server = app.listen( defaults.expressPort, () => {
   console.log("Express is started: " + defaults.expressPort);
 });
+
+// —————————————————————— Export ——————————————————————
+module.exports = () => {
+
+  return {
+    app: app,
+    server: server
+  };
+  
+};

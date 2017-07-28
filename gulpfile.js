@@ -3,6 +3,7 @@ const fs = require("fs");
 const gulp = require("gulp");
 const watch = require("gulp-watch");
 const gulpsync = require("gulp-sync")(gulp);
+const nodemon = require("gulp-nodemon");
 const clean = require("gulp-clean");
 const concat = require("gulp-concat");
 const sass = require("gulp-sass");
@@ -14,6 +15,7 @@ const fcrypt = require("fcrypt");
 gulp.task("default", ["clean"]);
 
 // —————————————————————— Paths ——————————————————————
+const backendPath = path.join( process.cwd(), "back-end" );
 const frontendPath = path.join( process.cwd(), "front-end" );
 const distPath = path.join( frontendPath, "dist" );
 const appPath = path.join( frontendPath, "app" );
@@ -21,13 +23,24 @@ const cssPath = path.join( appPath, "/styles/css" );
 
 // —————————————————————— Groups ——————————————————————
 //auto compile scss files
-gulp.task("auto", gulpsync.sync([ "scss", "watch" ]));
+gulp.task("scss-auto", gulpsync.sync([ "scss", "watch-scss" ]));
+
+//express and autorefresh
+gulp.task("express-auto", gulpsync.sync([ "watch-express" ]));
 
 //—————————————————————— Delete compiled files ——————————————————————
 gulp.task("clean", () => {
   return gulp.src([ distPath, cssPath ])
     .pipe(clean())
   ;
+});
+
+// —————————————————————— Express Server ——————————————————————
+gulp.task("watch-express", () => {
+  nodemon({
+    script: "./express.js",
+    watch:  "back-end"
+  })
 });
 
 // —————————————————————— Compile ——————————————————————
@@ -50,7 +63,7 @@ gulp.task("scss", () => {
 });
 
 // —————————————————————— Watching files updates ——————————————————————
-gulp.task("watch", () => {
+gulp.task("watch-scss", () => {
   return watch(path.join( appPath, "/**/*.scss"), compileSass);
 });
 

@@ -1,12 +1,10 @@
-import { browser } from 'protractor';
+import { browser } from "protractor";
 
-describe('angular-cli App', () => {
-  beforeEach(() => {
-    //
+describe("angular-cli", () => {
+
+  it("default test", () => {
+    var project = "angular"
+    expect(project).toEqual("angular");
   });
 
-  it('should display default title', () => {
-    browser.get('/');
-    expect(browser.getTitle()).toEqual('Angular Default');
-  });
 });

@@ -1,6 +1,6 @@
 {
   "name": "angular-default",
-  "version": "2.1.0",
+  "version": "2.2.2",
   "description": "Pattern for new angular projects",
   "scripts": {
     "start": "node express.js",
@@ -9,9 +9,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scss": "gulp auto",
+    "scss": "gulp scss-auto",
+    "express": "gulp express-auto",
     "dev": "concurrently \"npm run scss\" \"npm run serve\"",
-    "devx": "concurrently \"npm run scss\" \"npm run start\" \"npm run serve\""
+    "devx": "concurrently \"npm run scss\" \"npm run express\" \"npm run serve\""
   },
   "author": {
     "name": "Web Developland",
@@ -49,6 +50,7 @@
     "gulp-autoprefixer": "4.0.0",
     "gulp-clean": "0.3.2",
     "gulp-concat": "2.6.1",
+    "gulp-nodemon": "^2.2.1",
     "gulp-sass": "3.1.0",
     "gulp-sync": "0.1.4",
     "gulp-typescript": "3.2.1",

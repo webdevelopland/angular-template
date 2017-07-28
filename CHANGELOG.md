@@ -1,3 +1,11 @@
+## v2.2.0
+30 jul 2017
+
+* gulp auto express refresher
+* e2e fix
+* v2.2.1 express-auto fix
+* v2.2.2 ( 1 aug 2017 ) delete excess lines from gulpfile
+
 ## v2.1.0
 26 jul 2017
 
