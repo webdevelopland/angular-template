@@ -41,16 +41,3 @@ module.exports = {
   admin: checkAdmin,
   denied: denied
 };
-
-// //How to use
-// access.admin({
-//   ajax: ajax,
-//   cookie: cookie,
-//   callback: (greenlight) => {
-//     if (!greenlight) {
-//       access.denied(ajax);
-//       return;
-//     }
-//     //...
-//   }
-// });

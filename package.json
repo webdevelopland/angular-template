@@ -1,18 +1,22 @@
 {
   "name": "angular-default",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "Pattern for new angular projects",
   "scripts": {
     "start": "node express.js",
     "serve": "ng serve --proxy-config front-end/dev/express.proxy.json",
-    "build": "ng build --prod --aot",
+    "prod": "ng build --prod --aot",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scss": "gulp scss-auto",
+    "scss": "gulp scss",
+    "scss-auto": "gulp scss-auto",
     "express": "gulp express-auto",
-    "dev": "concurrently \"npm run scss\" \"npm run serve\"",
-    "devx": "concurrently \"npm run scss\" \"npm run express\" \"npm run serve\""
+    "unit": "concurrently \"npm run scss-auto\" \"npm run express\" \"npm run test\"",
+    "dev": "concurrently \"npm run scss-auto\" \"npm run serve\"",
+    "devx": "concurrently \"npm run express\" \"npm run scss-auto\" \"npm run serve\"",
+    "build": "concurrently \"npm run scss\" \"npm run prod\"",
+    "buildx": "concurrently \"npm run scss\" \"npm run prod\" \"npm run express\""
   },
   "author": {
     "name": "Web Developland",
@@ -20,11 +24,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "ajaxmanager": "1.0.3",
-    "body-parser": "1.17.2",
-    "express": "4.15.3",
-    "libraryjs": "3.0.0",
-    "mongoshell": "1.0.0"
+    "ajaxmanager": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "libraryjs": "^5.1.1",
+    "mongoshell": "^1.0.0"
   },
   "devDependencies": {
     "@angular/animations": "4.3.1",

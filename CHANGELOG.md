@@ -1,3 +1,11 @@
+## v2.3.0
+16 oct 2017
+
+* npm run commands update
+* unit & e2e testing update
+* libraryjs update
+* angular-cli localhost port:8000
+
 ## v2.2.0
 30 jul 2017
 

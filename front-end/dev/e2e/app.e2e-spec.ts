@@ -1,8 +1,8 @@
 import { browser } from "protractor";
 
-describe("angular-cli", () => {
+describe("e2e", () => {
 
-  it("default test", () => {
+  it("should works", () => {
     var project = "angular"
     expect(project).toEqual("angular");
   });
