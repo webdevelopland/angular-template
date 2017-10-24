@@ -1,3 +1,10 @@
+## v2.4.0
+24 oct 2017
+
+* back-end was configured
+* front-end 'this' fix
+* libraryjs "5.2.0" & ajaxmanager "1.1.0" update
+
 ## v2.3.0
 16 oct 2017
 

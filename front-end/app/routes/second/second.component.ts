@@ -9,8 +9,7 @@ export class SecondPageComponent {
   constructor(
     public title:Title
   ) {
-    var f = this;
-    f.title.setTitle("Second Page");
+    this.title.setTitle("Second Page");
   }
 
 }

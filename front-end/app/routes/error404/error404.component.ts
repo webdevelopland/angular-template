@@ -9,8 +9,7 @@ export class Error404PageComponent {
   constructor(
     public title:Title
   ) {
-    var f = this;
-    f.title.setTitle("Page doesn't exist");
+    this.title.setTitle("Page doesn't exist");
   }
 
 }

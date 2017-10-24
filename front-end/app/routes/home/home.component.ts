@@ -9,8 +9,7 @@ export class HomePageComponent {
   constructor(
     public title:Title
   ) {
-    var f = this;
-    f.title.setTitle("Angular Default");
+    this.title.setTitle("Angular Default");
   }
 
 }

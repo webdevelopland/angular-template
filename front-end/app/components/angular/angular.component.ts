@@ -8,12 +8,8 @@ export class AngularComponent implements OnInit, AfterContentInit {
 
   constructor() {}
 
-  ngOnInit() {
-    var f = this;
-  }
+  ngOnInit() {}
 
-  ngAfterContentInit() {
-    var f = this;
-  }
+  ngAfterContentInit() {}
   
 }
