@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 module.exports = (ajax) => {
   var routePath = path.join( process.cwd(), "/back-end/core/routes", ajax.import.route + ".js" );

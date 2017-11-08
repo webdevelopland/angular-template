@@ -1,26 +1,26 @@
-import { BrowserModule, Title } from "@angular/platform-browser";
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from "@angular/router";
-import { HttpModule, JsonpModule } from "@angular/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { RouterModule, Routes } from '@angular/router';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // —————————————————————— Components ——————————————————————
-import { AngularComponent } from "@/components/angular/angular.component";
-import { NavComponent } from "@/components/nav/nav.component";
+import { AngularComponent } from '@/components/angular/angular.component';
+import { NavComponent } from '@/components/nav/nav.component';
 
 // —————————————————————— Routes ——————————————————————
-import { HomePageComponent } from "@/routes/home/home.component";
-import { SecondPageComponent } from "@/routes/second/second.component";
-import { Error404PageComponent } from "@/routes/error404/error404.component";
+import { HomePageComponent } from '@/routes/home/home.component';
+import { SecondPageComponent } from '@/routes/second/second.component';
+import { Error404PageComponent } from '@/routes/error404/error404.component';
 
 const appRoutes: Routes = [
-  { path: "",         component: HomePageComponent },
-  { path: "second",   component: SecondPageComponent },
-  { path: "**",       component: Error404PageComponent }
+  { path: '', component: HomePageComponent },
+  { path: 'second', component: SecondPageComponent },
+  { path: '**', component: Error404PageComponent }
 ];
 
 // —————————————————————— Servies ——————————————————————
-import { SampleService } from "@/services/sample.service";
+import { SampleService } from '@/services/sample.service';
 
 // ———————————————————————————————— NgModule ————————————————————————————————
 @NgModule({
@@ -46,6 +46,6 @@ import { SampleService } from "@/services/sample.service";
     Title,
     SampleService
   ],
-  bootstrap: [ AngularComponent ]
+  bootstrap: [AngularComponent]
 })
 export class AngularModule {}

@@ -1,3 +1,10 @@
+## v2.5.0
+8 nov 2017
+
+* Angular 5
+* concurrently -> npm-run-all
+* " -> '
+
 ## v2.4.0
 24 oct 2017
 

@@ -1,8 +1,8 @@
-const bodyParser = require("body-parser");
-const js = require("libraryjs");
-const ajaxmanager = require("ajaxmanager");
-const mongoConnect = require("./mongo-connect");
-const router = require("./router");
+const bodyParser = require('body-parser');
+const js = require('libraryjs');
+const ajaxmanager = require('ajaxmanager');
+const mongoConnect = require('./mongo-connect');
+const router = require('./router');
 
 module.exports = (app) => {
 

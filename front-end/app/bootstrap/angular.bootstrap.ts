@@ -7,4 +7,5 @@ if (environment.production) {
 }
 
 import { AngularModule } from './angular.module';
-platformBrowserDynamic().bootstrapModule( AngularModule );
+platformBrowserDynamic().bootstrapModule(AngularModule)
+  .catch(err => console.log(err));

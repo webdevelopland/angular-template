@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { HomePageComponent } from './home.component';
 
-describe('HomePageComponent', () => {
+describe("HomePageComponent", () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -9,7 +9,7 @@ describe('HomePageComponent', () => {
       ]
     }).compileComponents();
   });
-  it('should be created', () => {
+  it("should be created", () => {
     const fixture = TestBed.createComponent(HomePageComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();

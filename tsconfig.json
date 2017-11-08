@@ -10,7 +10,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["front-end/app/*"]
-    } 
+    }
   },
   "exclude": [
     "node_modules"

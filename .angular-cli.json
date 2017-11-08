@@ -11,10 +11,10 @@
       "assets": [],
       "index": "app/bootstrap/index.html",
       "main": "app/bootstrap/angular.bootstrap.ts",
-      "polyfills": "dev/polyfills.ts",
       "test": "dev/unit/test.ts",
       "tsconfig": "app/tsconfig.app.json",
       "testTsconfig": "app/tsconfig.spec.json",
+      "polyfills": "dev/polyfills.ts",
       "prefix": "app",
       "environmentSource": "app/bootstrap/environments/environment.ts",
       "environments": {

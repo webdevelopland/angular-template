@@ -9,7 +9,11 @@
     },
     "types": []
   },
+  "include": [
+    "../**/*.ts"
+  ],
   "exclude": [
-    "./**/*.spec.ts"
+    "../**/*.spec.ts",
+    "../**/*.e2e-spec.ts"
   ]
 }

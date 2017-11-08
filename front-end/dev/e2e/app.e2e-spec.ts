@@ -1,10 +1,7 @@
-import { browser } from "protractor";
+import { browser } from 'protractor';
 
 describe("e2e", () => {
-
   it("should works", () => {
-    var project = "angular"
-    expect(project).toEqual("angular");
+    expect("e2e").toBeTruthy();
   });
-
 });

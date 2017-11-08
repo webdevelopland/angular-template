@@ -1,15 +1,13 @@
-import { Component } from "@angular/core";
-import { Title } from "@angular/platform-browser";
+import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
-  templateUrl: "./home.html"
+  templateUrl: './home.html'
 })
 export class HomePageComponent {
-
   constructor(
-    public title:Title
+    public title: Title
   ) {
     this.title.setTitle("Angular Default");
   }
-
 }

@@ -1,5 +1,5 @@
-const mongojs = require("mongojs");
-const defaults = require("./defaults")();
+const mongojs = require('mongojs');
+const defaults = require('./defaults')();
 
 module.exports = (success, fail) => {
   //connect to mongodb
