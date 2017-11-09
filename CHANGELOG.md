@@ -1,3 +1,8 @@
+## v2.6.0
+9 nov 2017
+
+* External Routing
+
 ## v2.5.0
 8 nov 2017
 
