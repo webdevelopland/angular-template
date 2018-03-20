@@ -9,7 +9,7 @@ import {
   Router,
   HomePageComponent,
   Error404PageComponent
-} from './routing';
+} from '@/routes/routing';
 
 // ---------------------- Components ----------------------
 import { AngularComponent } from '@/components';
