@@ -8,5 +8,9 @@ const appRoutes: Routes = [
   { path: '**', component: Error404PageComponent }
 ];
 
-export var Router = RouterModule.forRoot(appRoutes, { useHash: false });
-export { HomePageComponent, Error404PageComponent };
+export const PageComponents = [
+  HomePageComponent,
+  Error404PageComponent
+];
+
+export const Router = RouterModule.forRoot(appRoutes, { useHash: false });

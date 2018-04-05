@@ -4,12 +4,8 @@ import { NgModule } from '@angular/core';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-// ---------------------- Router ----------------------
-import {
-  Router,
-  HomePageComponent,
-  Error404PageComponent
-} from '@/routes/routing';
+// ---------------------- Routing ----------------------
+import { Router, PageComponents } from '@/routes/routing';
 
 // ---------------------- Components ----------------------
 import { AngularComponent } from '@/components';
@@ -22,8 +18,7 @@ import { Services } from '@/services/index.services';
 @NgModule({
   declarations: [
     ...Components,
-    HomePageComponent,
-    Error404PageComponent
+    ...PageComponents
   ],
 
   imports: [
