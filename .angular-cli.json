@@ -6,8 +6,8 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "src/dist",
-      "deployUrl": "dist",
+      "outDir": "dist",
+      "deployUrl": "",
       "assets": ["assets"],
       "index": "bootstrap/index.html",
       "main": "bootstrap/angular.bootstrap.ts",
@@ -22,7 +22,7 @@
         "prod": "bootstrap/environments/environment.prod.ts"
       },
       "styles": [
-        "styles/angular.scss"
+        "styles/import.scss"
       ],
       "scripts": []
     }
