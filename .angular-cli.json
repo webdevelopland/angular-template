@@ -22,7 +22,7 @@
         "prod": "bootstrap/environments/environment.prod.ts"
       },
       "styles": [
-        "styles/import.scss"
+        "styles/angular.scss"
       ],
       "scripts": []
     }
