@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "my_project_description",
   "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
     "serve": "ng serve",
     "build": "ng build --aot --prod",
     "test": "ng test",
