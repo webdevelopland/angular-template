@@ -6,7 +6,7 @@
     "serve": "ng serve",
     "build": "ng build --aot --prod",
     "test": "ng test",
-    "tslint": "ng lint",
+    "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "license": "MIT",
