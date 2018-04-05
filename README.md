@@ -2,12 +2,12 @@
 
 Hello World!
 
-#### Development
+### Development
 ```
 npm run serve
 ```
 
-#### Deploy
+### Deploy
 ```
 npm run build
 firebase deploy
@@ -15,17 +15,17 @@ firebase deploy
 How to use firebase:
 https://firebase.google.com/docs/hosting/quickstart
 
-#### Unit testing
+### Unit testing
 ```
 npm run test
 ```
 
-#### End-to-End testing
+### End-to-End testing
 ```
 npm run e2e
 ```
 
-#### TypeScript linting
+### TypeScript linting
 ```
 npm run lint
 ```
