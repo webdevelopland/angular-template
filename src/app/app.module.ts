@@ -1,33 +1,34 @@
 // ---------------------- Angular ----------------------
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-// ---------------------- Routing ----------------------
-import { Router, PageComponents } from '@/routes/routing';
+import { FormsModule } from '@angular/forms';
 
 // ---------------------- Components ----------------------
-import { AngularComponent } from '@/components';
-import { Components } from '@/components/index.components.ts';
+import { AppComponent } from './app.component';
+import { Router, PageComponents } from './app-routing';
+import { HelloComponent } from './';
 
 // ---------------------- Servies ----------------------
-import { Services } from '@/services/index.services';
+import { SampleService } from './';
 
 // ---------------------- NgModule ----------------------
 @NgModule({
   declarations: [
-    ...Components,
-    ...PageComponents
+    AppComponent,
+    ...PageComponents,
+    HelloComponent,
   ],
 
   imports: [
     BrowserModule,
-    Router
+    FormsModule,
+    Router,
   ],
 
   providers: [
-    ...Services
+    SampleService,
   ],
 
-  bootstrap: [AngularComponent]
+  bootstrap: [AppComponent],
 })
-export class AngularModule { }
+export class AppModule { }

@@ -1,16 +1,16 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomePageComponent } from './home/home.component';
-import { Error404PageComponent } from './error404/error404.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: '**', component: Error404PageComponent }
+  { path: '**', component: NotFoundPageComponent },
 ];
 
 export const PageComponents = [
   HomePageComponent,
-  Error404PageComponent
+  NotFoundPageComponent,
 ];
 
 export const Router = RouterModule.forRoot(appRoutes, { useHash: false });

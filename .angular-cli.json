@@ -9,17 +9,17 @@
       "outDir": "dist",
       "deployUrl": "",
       "assets": ["assets"],
-      "index": "bootstrap/index.html",
-      "main": "bootstrap/angular.bootstrap.ts",
-      "test": "dev/unit/test.ts",
+      "index": "index.html",
+      "main": "main.ts",
+      "test": "sys/unit/test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "polyfills": "dev/polyfills.ts",
+      "polyfills": "sys/polyfills.ts",
       "prefix": "app",
-      "environmentSource": "bootstrap/environments/environment.ts",
+      "environmentSource": "environments/environment.ts",
       "environments": {
-        "dev": "bootstrap/environments/environment.ts",
-        "prod": "bootstrap/environments/environment.prod.ts"
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
       },
       "styles": [
         "styles/angular.scss"

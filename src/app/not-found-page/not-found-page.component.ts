@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'error404-page',
-  templateUrl: './error404.component.html'
+  selector: 'not-found-page',
+  templateUrl: './not-found-page.component.html',
 })
-export class Error404PageComponent {
+export class NotFoundPageComponent {
   constructor(
     public title: Title
   ) {
-    this.title.setTitle("Page doesn't exist");
+    this.title.setTitle('Page not found');
   }
 }

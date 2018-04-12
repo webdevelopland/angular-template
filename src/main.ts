@@ -6,6 +6,6 @@ if (environment.production) {
   enableProdMode();
 }
 
-import { AngularModule } from './angular.module';
-platformBrowserDynamic().bootstrapModule(AngularModule)
+import { AppModule } from './app/app.module';
+platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));

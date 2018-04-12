@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
+      "src/*": ["./*"]
     },
     "types": [
       "jasmine",
@@ -11,7 +11,7 @@
     ]
   },
   "files": [
-    "./dev/unit/test.ts"
+    "./sys/unit/test.ts"
   ],
   "exclude": [
     "./**/*.e2e-spec.ts"

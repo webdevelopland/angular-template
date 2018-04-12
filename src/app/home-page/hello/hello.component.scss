@@ -1,6 +1,7 @@
-@import '../../styles/fonts.var';
+@import '../../../styles/fonts';
 
 .hello {
   font-size: 20px;
   font-family: $default-font;
+  margin-bottom: 10px;
 }

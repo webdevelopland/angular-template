@@ -2,10 +2,16 @@
 
 Hello World!
 
+### Installation
+```
+npm run install
+```
+
 ### Development
 ```
 npm run serve
 ```
+Development server: `http://localhost:8000/`
 
 ### Deploy
 ```
